@@ -225,7 +225,16 @@ body {
     margin: 0;
     color: #fff;
   }
-  
+  footer {
+    background: #7b61ff;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
   /* Responsive adjustments */
   @media (max-width: 900px) {
     .container {
@@ -269,7 +278,7 @@ body {
     }
     
   }
-  @media (max-width: 1440px) {
+  /* @media (max-width: 1440px) {
 
     .container {
       max-width: 100%;
@@ -291,4 +300,4 @@ body {
         "manage maintain"
         "grow grow";
     }
-  }
+  } */
