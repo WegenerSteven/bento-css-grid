@@ -278,26 +278,4 @@ body {
     }
     
   }
-  /* @media (max-width: 1440px) {
-
-    .container {
-      max-width: 100%;
-      padding: 0 16px;
-    }
-    .left-card {
-      width: 100%;
-    }
-    .left-card .post,
-    .left-card .content {
-      width: 100%;
-    }
-    .right-card {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, minmax(120px, auto));
-      gap: 16px;
-      grid-template-areas:
-        "social social"
-        "manage maintain"
-        "grow grow";
-    }
-  } */
+ 
