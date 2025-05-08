@@ -1,0 +1,294 @@
+body {
+    background: #f6f6f6;
+    font-family: 'Inter', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+  
+  .left-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .left-card .post,
+  .left-card .content {
+    background: #f8f3ea;
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  
+  .left-card .content {
+    background: #ffd36a;
+    margin-top: 16px;
+  }
+  
+  .left-card h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #222;
+  }
+  
+  .left-card .post p {
+    font-size: 1.2rem;
+    color: #7b61ff;
+    font-style: italic;
+    margin: 0 0 16px 0;
+  }
+  
+  .left-card img {
+    margin-top: 16px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .right-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(120px, auto));
+    gap: 24px;
+    grid-template-areas:
+      "social social schedule"
+      "manage maintain schedule"
+      "grow grow grow";
+  }
+  
+  .social-card {
+    grid-area: social;
+    background: #7b61ff;
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .social-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+  }
+  
+  .social-card h1 span {
+    color: #ffd36a;
+  }
+  
+  .social-card img {
+    width: 120px;
+    margin: 16px 0 8px 0;
+  }
+  
+  .social-card p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .schedule-card {
+    grid-area: schedule;
+    background: #e6d8ff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .schedule-card h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #222;
+  }
+  
+  .schedule-card img {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .schedule-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+  }
+  
+  .manage-audience {
+    grid-area: manage;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .manage-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .manage-card img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .manage-card h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+  }
+  
+  .audience-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .audience-card h1 {
+    font-size: 1.5rem;
+    color: #7b61ff;
+    margin: 0;
+  }
+  
+  .audience-card p {
+    font-size: 1rem;
+    color: #222;
+    margin: 0;
+  }
+  
+  .audience-card img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .maintain-card {
+    grid-area: maintain;
+    background: #ffd36a;
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .maintain-card h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #222;
+  }
+  
+  .maintain-card img {
+    width: 100%;
+  }
+  
+  .grow-card {
+    grid-area: grow;
+    background: #7b61ff;
+    color: #fff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .grow-card img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .grow-card h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .container {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .right-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+      grid-template-areas: none;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 375px) {
+    .left-card .post p {
+      font-size: 1rem;
+    }
+    .left-card h1 {
+      font-size: 1.2rem;
+    }
+    .left-card img {
+      width: 40px;
+      height: 40px;
+    }
+    .social-card h1 {
+      font-size: 1.5rem;
+    }
+    .social-card img {
+      width: 80px;
+    }
+    .manage-card h1 {
+      font-size: 1rem;
+    }
+    .audience-card h1 {
+      font-size: 1.2rem;
+    }
+    .audience-card img {
+      width: 24px;
+      height: 24px;
+    }
+    
+  }
+  @media (max-width: 1440px) {
+
+    .container {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+    .left-card {
+      width: 100%;
+    }
+    .left-card .post,
+    .left-card .content {
+      width: 100%;
+    }
+    .right-card {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, minmax(120px, auto));
+      gap: 16px;
+      grid-template-areas:
+        "social social"
+        "manage maintain"
+        "grow grow";
+    }
+  }
